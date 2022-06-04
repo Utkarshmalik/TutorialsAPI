@@ -27,12 +27,12 @@ app.use(cors({
 app.use(bodyParser.json());
 
 
-require("./app/routes/auth.routes")(app);
+require(path.join(__dirname,"./app/routes/auth.routes"))(app);
 
 app.use(verifyToken);
 
-require("./app/routes/tutorial.routes")(app);
-require("./app/routes/user.routes")(app);
+require(path.join(__dirname,"./app/routes/tutorial.routes"))(app);
+require(path.join(__dirname,"./app/routes/user.routes"))(app);
 
 
 
